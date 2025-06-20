@@ -1,0 +1,10 @@
+London UK
+San Ramon CA
+San Francisco CA
+Paris FR
+Tokyo JP
+Mumbai IN
+New York US
+Dhaka BD
+Zurich CH
+Kolkata IN

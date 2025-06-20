@@ -1,0 +1,876 @@
+/* TABLETS AND PHONE SPECIFIC STYLES */
+@media (max-width: 400px) {
+  html {
+    font-size: 45%;
+  }
+  .hour-list {
+    .list-group {
+      width: 95%;
+      .list-group-item {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        .condition {
+          grid-row: 1;
+          grid-column: 3;
+
+          svg {
+            height: 8rem;
+            width: 8rem;
+          }
+        }
+        .temp {
+          grid-row: 1;
+          grid-column: 2;
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+
+  .info-card {
+    .info-head {
+      svg,
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .home .hero {
+    .head {
+      margin-top: 3rem;
+      h1 {
+        font-size: 4rem;
+      }
+      h3 {
+        font-size: 2.4rem;
+      }
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .home {
+    h2 {
+      font-size: 3.2rem;
+    }
+  }
+  /*.home .hero .head .local-section {
+    width: 95%;
+
+    .current {
+      
+      align-items: center;
+      justify-items: center;
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+      .current-head {
+        justify-content: space-between;
+        align-items: start;
+        h1 {
+          margin-top: 0;
+        }
+      }
+      .current-head {
+        justify-self: center;
+      }
+
+      gap: 3rem;
+      .condition {
+        img {
+          width: 12rem !important;
+          height: 12rem !important;
+        }
+        justify-self: center;
+      }
+    }
+    .det-row {
+      flex-wrap: wrap;
+    }
+  }*/
+
+  .global-section {
+    .section-layout {
+      .cities {
+        width: 95%;
+      }
+    }
+  }
+
+  .details {
+    .weather-page-header {
+      .info {
+        .section-head {
+          .head-info {
+            grid-row: 1;
+            grid-column: 1 / span 2;
+            justify-self: center;
+            align-items: center;
+          }
+          .temp {
+            grid-row: 2;
+            grid-column: 1;
+          }
+          .cond-icon {
+            grid-row: 2;
+            grid-column: 2;
+            img {
+              height: auto;
+              width: 90%;
+            }
+          }
+        }
+        .section-info {
+          .info-card {
+            .info-content {
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .hour-list {
+    .list-group {
+      .list-group-item {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        padding-bottom: 2rem;
+        padding-top: 1rem;
+        img,
+        svg {
+          height: 3rem;
+        }
+        .condition {
+          grid-row: 1;
+          grid-column: 3;
+
+          img {
+            height: 7rem;
+            width: 7rem;
+          }
+        }
+
+        .more-info {
+          grid-row: 2;
+          grid-column: 1 / span 3;
+          flex-direction: row !important;
+          gap: 5rem;
+          justify-self: center !important;
+
+          div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          .wind {
+            gap: 1rem;
+            margin-top: 1rem;
+            svg {
+              height: 2rem;
+              width: 2rem;
+            }
+          }
+        }
+        .temp {
+          grid-row: 1;
+          grid-column: 2;
+          font-size: 3.6rem;
+          sup {
+            font-size: 1.2rem !important;
+          }
+          svg {
+            height: 4rem;
+            width: 4rem;
+          }
+        }
+
+        .hour {
+          .time {
+            font-size: 1.8rem;
+          }
+          img {
+            height: 2rem;
+          }
+        }
+        /*.more-info {
+          border: 1px solid #6457a6;
+          border-radius: 1rem;
+          padding: 1rem;
+        }*/
+      }
+    }
+  }
+  .daily {
+    .list-group {
+      .daily-list-item {
+        .list-group-item {
+          grid-template-columns: 1fr 1fr 1fr;
+          align-items: center;
+          padding: 2rem !important;
+          .dayofweek {
+            & .weekday {
+              .day {
+                font-size: 1.6rem;
+              }
+            }
+          }
+
+          .temp {
+            grid-column: 2;
+            font-size: 3.6rem;
+            margin-top: 1rem;
+            justify-self: center;
+            svg {
+              width: 4rem;
+              height: 4rem;
+            }
+          }
+          .day {
+            font-size: 1.6rem;
+          }
+          .dayofweek {
+            justify-self: start;
+          }
+          .condition {
+            grid-column: 3;
+            grid-row: 1;
+            align-self: center;
+            justify-self: center;
+            img {
+              width: 10rem !important;
+              height: 10rem !important;
+            }
+          }
+          .more-info {
+            grid-column: 1 / span 3;
+            grid-row: 2;
+            justify-self: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  .home .hero .local-section {
+    .current {
+      padding: 3rem 10rem;
+      .current-data {
+        flex-wrap: nowrap;
+      }
+    }
+  }
+  global-section {
+    .section-layout {
+      .cities {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .home .hero {
+    .head {
+      h1 {
+        font-size: 5.6rem;
+      }
+    }
+  }
+  .home {
+    h2 {
+      font-size: 3.6rem !important;
+    }
+  }
+  .details {
+    & .weather-page-header {
+      & .info {
+        & .section-info {
+          & .info-card {
+            .info-content {
+              font-size: 1.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .hour-list {
+    .list-group {
+      .list-group-item {
+        .condition {
+          svg {
+            width: 12rem;
+            height: 12rem;
+          }
+        }
+        .hour {
+          .time {
+            font-size: 1.8rem;
+            img {
+              height: 25;
+            }
+          }
+        }
+        /*.temp {
+          font-size: 4.8rem;
+          svg {
+            width: 5rem;
+            height: 5rem;
+          }
+        }*/
+      }
+    }
+  }
+  .daily {
+    .daily-list {
+      .daily-list-item {
+        .list-group-item {
+          grid-template-columns: 1fr 1fr 1fr;
+          padding: 1rem !important;
+          .temp {
+            grid-column: 2;
+            /*font-size: 5.6rem;
+            svg {
+              width: 7rem;
+              height: 7rem;
+            }*/
+          }
+          .day {
+            font-size: 1.6rem;
+          }
+          .condition {
+            /*grid-column: 3;
+          grid-row: 1;*/
+            align-self: center;
+            justify-self: center;
+            svg {
+              width: 10rem !important;
+              height: 10rem !important;
+            }
+          }
+          .more-info {
+            grid-column: 1 / span 3;
+            grid-row: 2;
+            flex-direction: row !important;
+            gap: 5rem;
+            justify-self: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .hour-list .weather-page-header,
+  .daily .weather-page-header {
+    justify-content: center;
+    text-align: center !important;
+  }
+
+  .hour-list .weather-page-header .hourly-header {
+    width: 100%;
+    align-items: center;
+  }
+
+  .daily .weather-page-header .daily-header {
+    width: 100%;
+    align-items: center;
+  }
+
+  .details {
+    .weather-page-header {
+      .info {
+        width: 95%;
+        gap: 2rem;
+        .section-head {
+          /*flex-direction: column-reverse;
+          /*.head-info {
+            align-items: center;
+          }*/
+          .cond-icon img {
+            width: 90%;
+          }
+        }
+      }
+    }
+    .info-row {
+      .info-group {
+        /*grid-template-columns: 1fr;*/
+        align-self: center;
+        width: 100%;
+        gap: 1rem;
+        .info-card {
+          width: 45%;
+          svg,
+          img {
+            width: 5rem;
+          }
+          .info-content {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  .daily {
+    .list-group {
+      .list-group-item {
+        .temp {
+          grid-column: 2;
+          font-size: 2.4rem;
+        }
+        .day {
+          font-size: 1.6rem;
+        }
+        .condition {
+          /*grid-column: 3;
+          grid-row: 1;*/
+          align-self: center;
+          justify-self: center;
+        }
+      }
+    }
+  }
+
+  .cities-page {
+    .city-list {
+      .city-list-item {
+        width: 90%;
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .details {
+    .info {
+      .section-head {
+        .cond-icon img {
+          width: 90%;
+        }
+      }
+    }
+  }
+
+  .cities-page {
+    .city-list {
+      .city-list-item {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) and (max-width: 992px) {
+  .daily {
+    .daily-wrapper {
+      width: 97%;
+    }
+    .daily-list {
+      width: 95%;
+    }
+  }
+
+  .local-section {
+    .section-layout {
+      .current {
+        .current-row {
+          grid-template-columns: 1fr 1fr;
+          .current-head {
+            grid-row: 1;
+            grid-column: 1 / span 2;
+            justify-self: center;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  /*.App-header {
+    height: 10rem;
+  }*/
+
+  /*nav {
+    align-self: flex-start !important;
+  }*/
+
+  .App-header {
+    .search {
+      width: 50%;
+    }
+    .logo {
+      width: 30%;
+    }
+    /*img {
+      width: 9%;
+    }*/
+  }
+
+  nav {
+    justify-self: start;
+    flex-grow: 1;
+    margin-left: 1rem;
+  }
+
+  .navbar-toggler {
+    position: relative;
+  }
+
+  .navbar-collapse {
+    margin-left: 1rem !important;
+    border-radius: 1rem;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 20rem;
+    /*padding: 2rem;*/
+    ul {
+      padding: 2rem;
+    }
+    li a {
+      color: #333333 !important;
+    }
+  }
+
+  .nav-item a {
+    font-size: 1.2rem !important;
+    padding: 0px;
+    width: auto;
+  }
+
+  ul.navbar-nav {
+    gap: 1rem !important;
+  }
+
+  .top-padding {
+    padding-top: 10rem !important;
+  }
+  .home .hero {
+    .head {
+      p {
+        width: 100%;
+      }
+    }
+  }
+
+  .global-map-section {
+    .section-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .global-section {
+    h2 {
+      text-align: center;
+    }
+
+    .section-layout {
+      /*grid-template-columns: 1fr;*/
+      /*height: 100rem;*/
+      .cities {
+        justify-self: center;
+        /*grid-row: 2;*/
+      }
+    }
+  }
+
+  .details {
+    .weather-page-header {
+      .info {
+        gap: 2rem;
+
+        .section-head {
+          gap: 1rem;
+          /*.cond-icon svg {
+            width: 22rem;
+            height: 22rem;
+            margin-left: 0;
+          }*/
+        }
+        .section-info {
+          flex-wrap: wrap;
+          .info-card {
+            height: 12rem;
+            padding: 1rem;
+            svg,
+            img {
+              width: 3rem;
+              height: 3rem;
+            }
+            .info-head {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+
+    .map-row {
+      /*flex-direction: column-reverse;
+      .info-group {
+        width: 100%;
+      }*/
+      .map-current {
+        width: 95%;
+        .leaflet-container {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .cities-page {
+    .city-list {
+      flex-direction: column;
+      gap: 4rem;
+      align-items: center;
+      justify-content: center;
+      .city-list-item {
+        .city-head {
+          grid-template-columns: 1fr;
+          .city-weather-icon {
+            grid-column: 1;
+            grid-row: 2;
+          }
+        }
+      }
+    }
+  }
+
+  .daily {
+    .list-group {
+      .list-group-item {
+        .condition {
+          svg {
+            width: 12rem;
+            height: 12rem;
+          }
+        }
+        .weekday {
+          .day {
+            font-size: 1.8rem;
+            img {
+              height: 25;
+            }
+          }
+        }
+        /*.temp {
+          font-size: 4.8rem;
+          svg {
+            width: 5rem;
+            height: 5rem;
+          }
+        }*/
+        .more-info {
+          flex-direction: row !important;
+          justify-self: center;
+          align-self: center;
+          border: 1px solid rgb(213, 204, 248);
+          border-radius: 1rem;
+          padding: 0.5rem 2rem;
+          gap: 3rem;
+
+          div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+
+  .about {
+    .section-layout {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      .images {
+        height: 25rem;
+        .img1 {
+          left: 0;
+        }
+        .img2 {
+          right: 0;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .navbar-expand-lg .navbar-toggler {
+    display: none !important;
+  }
+  .navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav {
+    align-self: center !important;
+  }
+
+  .hour-list {
+    .hour-wrapper {
+      width: 85%;
+    }
+    .list-group {
+      width: 90%;
+    }
+  }
+
+  .daily {
+    .daily-wrapper {
+      width: 85%;
+    }
+    .daily-list {
+      width: 95%;
+      .more-info {
+        gap: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .App-header {
+    height: 11rem;
+  }
+
+  .global-section {
+    .section-layout {
+      grid-template-columns: 60% 40%;
+    }
+  }
+  .home .hero {
+    .head p {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .App-header {
+    ul {
+      gap: 1rem;
+      li.nav-item a {
+        font-size: 1.4rem !important;
+      }
+    }
+  }
+  .cities-page {
+    .city-list {
+      .city-list-item {
+        .city-head {
+          /*grid-template-columns: 1fr 1fr;
+          * {
+            align-self: center;
+            justify-self: center;
+            text-align: center;
+          }*/
+          .temp {
+            svg {
+              width: 6rem;
+              height: auto;
+            }
+          }
+          .city-weather-icon {
+            grid-column: 2;
+            grid-row: 2;
+            svg {
+              width: 15rem;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  /*.weather-page-header {
+    margin-top: 0;
+   
+  }*/
+
+  .hour-list {
+    .list-group {
+      .list-group-item {
+        padding: 1rem;
+      }
+    }
+  }
+
+  .daily {
+    > * {
+      width: 95%;
+    }
+  }
+  .details {
+    > * {
+      width: 95%;
+    }
+    .info-row {
+      .info-group {
+        /*grid-template-columns: 1fr;*/
+        align-self: center;
+        width: 100%;
+        .info-card {
+          .info-content {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+
+    .hourly-row {
+      padding: 0 2rem;
+
+      .hourly-card {
+        .condition {
+          img {
+            width: 7rem;
+            height: 7rem;
+          }
+        }
+      }
+    }
+
+    .daily-row {
+      padding: 0 2rem;
+
+      .daily-card {
+        .condition {
+          img {
+            width: 7rem;
+            height: 7rem;
+          }
+        }
+      }
+    }
+  }
+}

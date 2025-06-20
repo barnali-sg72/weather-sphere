@@ -1,0 +1,24 @@
+London, UK
+San Francisco, CA, US
+Paris, FR
+Tokyo, JP
+Mumbai, IN
+New York, US
+Dhaka, BD
+Zurich, CH
+Kolkata, IN
+Amsterdam, NL
+Johannesburg, ZA
+Atlanta, GA, US
+Sydney, AU
+Auckland, NZ
+Frankfurt, DE
+Barcelona, ES
+Rome, IT
+Beijing, CN
+Moscow, RU
+New Delhi, IN
+Toronto, CA
+Cairo, EG
+Rio de Janeiro, BR
+Copenhagen, DK

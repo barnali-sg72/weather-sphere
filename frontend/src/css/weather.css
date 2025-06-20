@@ -1,0 +1,217 @@
+/* Weather classes*/
+
+/* DAY CLASSES */
+.day-clear {
+  background-image: url("../assets/images/icons/sun1.png"),
+    linear-gradient(225deg, #fbf0ca, #e0a933c6, rgba(114, 75, 2, 0.808)),
+    url("../assets/images/background/city-bg.jpg");
+  background-size: 15rem 15rem, cover, 100% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top right, bottom, bottom;
+  /* h1,
+  h4,
+  p,
+  * {
+    color: #0b0b0b !important;
+  }*/
+}
+.day-cloud {
+  background-image: url("../assets/images/icons/day-clouds.png"),
+    linear-gradient(
+      to bottom,
+      rgb(103, 149, 180),
+      rgba(64, 136, 170, 0.806),
+      rgba(30, 126, 171, 0.8) 70%
+    ),
+    url("../assets/images/background/city-bg.jpg");
+  background-size: 15rem 15rem, cover, 100% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top right, bottom, bottom;
+}
+.day-rain {
+  background-image: url("../assets/images/icons/rain.png"),
+    linear-gradient(
+      225deg,
+      rgba(132, 193, 236, 0.8),
+      rgba(84, 129, 164, 0.9),
+      rgba(57, 93, 131, 0.8) 80%
+    ),
+    url("../assets/images/background/rain-bg.png"),
+    url("../assets/images/background/city-bg.jpg");
+  background-size: 15rem 15rem, cover, cover, 100% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: top right, bottom, center, bottom;
+}
+.day-drizzle {
+  background-image: url("../assets/images/icons/drizzle1.png"),
+    /* linear-gradient(225deg, #e3f2fd, #81d4fa, rgba(79, 194, 247, 0.7) 70%),*/
+      linear-gradient(225deg, #e3f8fde8, #81e0faea, rgba(79, 222, 247, 0.7) 70%),
+    url("../assets/images/background/drizzle-bg.png"),
+    url("../assets/images/background/city-bg.jpg");
+  background-size: 15rem 15rem, cover, cover, 100% 100%;
+  background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+  background-position: top right, bottom, center, bottom;
+}
+.day-snow {
+  background-image: url("../assets/images/icons/snow.png"),
+    linear-gradient(225deg, #81c5f5cf, #6ecdf9d7, rgba(51, 174, 232, 0.863) 70%),
+    url("../assets/images/background/snow-bg.png"),
+    url("../assets/images/background/city-bg.jpg");
+  background-size: 15rem 15rem, cover, cover, 100% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: top right, bottom, top, bottom;
+}
+.day-thunderstorm {
+  background-image: url("../assets/images/icons/thunderstorm.png"),
+    linear-gradient(225deg, #c1c9fea8, #8d75c1bb, rgba(95, 92, 192, 0.57) 70%),
+    url("../assets/images/background/thunderstorm-bg.png"),
+    url("../assets/images/background/city-bg.jpg");
+  background-size: 15rem 15rem, cover, cover, 100% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: top right, bottom, top, bottom;
+}
+.day-fog {
+  background-image: url("../assets/images/icons/day-fog1.png"),
+    linear-gradient(
+      225deg,
+      rgb(231, 236, 240),
+      rgb(191, 232, 250),
+      rgba(125, 165, 184, 0.897),
+      rgba(96, 134, 154, 0.8)
+    ),
+    url("../assets/images/background/city-bg.jpg");
+  background-size: 15rem 15rem, cover, 100% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top right, bottom, bottom;
+}
+.day-mist {
+  background-image: url("../assets/images/icons/day-mist.png"),
+    linear-gradient(
+      225deg,
+      rgba(204, 221, 247, 0.9),
+      rgb(138, 165, 207),
+      rgba(120, 148, 192, 0.763) 70%
+    ),
+    url("../assets/images/background/city-bg.jpg");
+  background-size: 15rem 15rem, cover, 100% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top right, bottom, bottom;
+}
+.day-haze {
+  background-image: url("../assets/images/icons/day-haze1.png"),
+    linear-gradient(225deg, #f5d89f, #c5a468, rgba(120, 102, 67, 0.8) 70%),
+    url("../assets/images/background/city-bg.jpg");
+  background-size: 15rem 15rem, cover, 100% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top right, bottom, bottom;
+}
+
+/* NIGHT CLASSES */
+.night-clear {
+  background-image: url("../assets/images/icons/moon1.png"),
+    linear-gradient(
+      to bottom,
+      #0b0c1d 10%,
+
+      rgba(37, 44, 116, 0.66) 70%,
+      rgba(11, 12, 29, 0.91)
+    ),
+    url("../assets/images/background/city-bg.jpg");
+  background-size: 15rem 15rem, cover, 100% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top right, bottom, bottom;
+}
+.night-cloud {
+  background-image: url("../assets/images/icons/night-cloud.png"),
+    linear-gradient(
+      to bottom,
+      rgb(13, 3, 24),
+      rgba(50, 32, 67, 0.826),
+      rgba(39, 25, 49, 0.63)
+    ),
+    url("../assets/images/background/city-bg.jpg");
+  background-size: 15rem 15rem, cover, 100% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top right, bottom, bottom;
+}
+.night-rain {
+  background-image: url("../assets/images/icons/rain.png"),
+    linear-gradient(225deg, #0f2027e5, #203a43d5, rgba(44, 83, 100, 0.78) 70%),
+    url("../assets/images/background/rain-bg.png"),
+    url("../assets/images/background/city-bg.jpg");
+  background-size: 15rem 15rem, cover, cover, 100% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: top right, bottom, top, bottom;
+}
+.night-drizzle {
+  background-image: url("../assets/images/icons/drizzle.png"),
+    linear-gradient(225deg, #0d1b2ad6, #1b263bd6, rgba(65, 90, 119, 0.78) 70%),
+    url("../assets/images/background/drizzle-bg.png"),
+    url("../assets/images/background/city-bg.jpg");
+  background-size: 15rem 15rem, cover, cover, 100% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: top right, bottom, top, bottom;
+}
+.night-snow {
+  background-image: url("../assets/images/icons/snow1.png"),
+    linear-gradient(
+      225deg,
+      rgba(1, 58, 86, 0.902),
+      rgba(13, 49, 72, 0.904),
+      rgba(74, 119, 156, 0.72) 70%
+    ),
+    /*linear-gradient(to top, rgb(144, 193, 252), transparent),*/
+      url("../assets/images/background/snow-bg.png"),
+    url("../assets/images/background/city-bg.jpg");
+  background-size: 15rem 15rem, cover, cover, 100% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: top right, bottom, top, bottom;
+}
+.night-thunderstorm {
+  background-image: url("../assets/images/icons/thunderstorm.png"),
+    linear-gradient(
+      225deg,
+      rgba(21, 39, 65, 0.753),
+      rgba(38, 12, 82, 0.792),
+      rgba(99, 65, 154, 0.532) 70%
+    ),
+    url("../assets/images/background/thunderstorm-bg.png"),
+    url("../assets/images/background/city-bg.jpg");
+  background-size: 15rem 15rem, cover, cover, 100% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: top right, bottom, top, bottom;
+}
+.night-fog {
+  background-image: url("../assets/images/icons/night-fog.png"),
+    linear-gradient(to bottom, #8592a4 20%, #49515b 50%, #222830af),
+    url("../assets/images/background/city-bg.jpg");
+  background-size: 15rem 15rem, cover, 100% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top right, bottom, bottom;
+}
+.night-mist {
+  background-image: url("../assets/images/icons/night-mist.png"),
+    linear-gradient(
+      to bottom,
+      rgb(17, 24, 41),
+      rgb(30, 44, 74),
+      rgba(64, 107, 154, 0.75) 90%
+    ),
+    url("../assets/images/background/city-bg.jpg");
+  background-size: 15rem 15rem, cover, 100% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top right, bottom, bottom;
+}
+.night-haze {
+  background-image: url("../assets/images/icons/night-haze.png"),
+    linear-gradient(
+      to bottom,
+      rgb(24, 18, 12),
+      rgba(123, 92, 62, 0.881),
+      rgba(210, 155, 100, 0.751) 80%
+    ),
+    url("../assets/images/background/city-bg.jpg");
+  background-size: 15rem 15rem, cover, 100% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top right, bottom, bottom;
+}
