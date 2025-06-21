@@ -76,7 +76,8 @@ export default function Main() {
           setLongitude(pos.coords.longitude);
           axios
             .get(
-              `http://localhost:5001/api/city?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}`
+              `${process.env.REACT_APP_BACKEND_URL}/api/city?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}`
+              //`http://localhost:5001/api/city?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}`
               //`https://api.openweathermap.org/geo/1.0/reverse?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&limit=5&appid=2e991483d328650ae67eb0609d0fc654`
             )
             .then((res) => {
@@ -127,7 +128,8 @@ export default function Main() {
       //alert(city);
       axios
         .get(
-          `http://localhost:5001/api/weather?city=${city}`
+          `${process.env.REACT_APP_BACKEND_URL}/api/weather?city=${city}`
+          //`http://localhost:5001/api/weather?city=${city}`
           //"http://api.openweathermap.org/data/2.5/weather?q=" +            city +            "&units=imperial&APPID=2e991483d328650ae67eb0609d0fc654"
         )
         //axios.get("http://api.weatherapi.com/v1/forecast.json?key=ff6cee14345c4052810220417240404&q="+city+"&days=14")
@@ -147,7 +149,8 @@ export default function Main() {
   const getDetailWeather = (lat, lon) => {
     axios
       .get(
-        `http://localhost:5001/api/forecastDetails?lat=${lat}&lon=${lon}`
+        `${process.env.REACT_APP_BACKEND_URL}/api/forecastDetails?lat=${lat}&lon=${lon}`
+        //`http://localhost:5001/api/forecastDetails?lat=${lat}&lon=${lon}`
         /*"https://api.openweathermap.org/data/3.0/onecall?lat=" +
           lat +
           "&lon=" +
@@ -334,7 +337,8 @@ export default function Main() {
 
   const fetchWeatherInfo = async (cityName) => {
     const response = await axios.get(
-      `http://localhost:5001/api/weather?city=${cityName}`
+      `${process.env.REACT_APP_BACKEND_URL}/api/weather?city=${cityName}`
+      //`http://localhost:5001/api/weather?city=${cityName}`
       /*"http://api.openweathermap.org/data/2.5/weather?q=" +
         cityName +
         "&units=imperial&APPID=2e991483d328650ae67eb0609d0fc654"*/
