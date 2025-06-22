@@ -25,7 +25,10 @@ export default function Header() {
 
       <Nav />
 
-      <div className="search d-flex align-items-center justify-content-center">
+      <form
+        onSubmit={context.handleSearchClick}
+        className="search d-flex align-items-center justify-content-center"
+      >
         <input
           type="text"
           name="city"
@@ -35,14 +38,10 @@ export default function Header() {
           ref={context.cityRef}
         ></input>
 
-        <button
-          type="button"
-          className="btn btn-light float-start"
-          onClick={context.handleSearchClick}
-        >
+        <button type="submit" className="btn btn-light float-start">
           <FaSearch />
         </button>
-      </div>
+      </form>
     </header>
   );
 }

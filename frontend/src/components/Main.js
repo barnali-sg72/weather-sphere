@@ -29,6 +29,7 @@ import { AppContext } from "../App";
 import { useContext, useState, useEffect } from "react";
 import WeatherPage from "./WeatherPage";
 import { Redirect } from "react-router-dom";
+import ErrorPage from "./ErrorPage";
 
 export const WeatherContext = React.createContext(null);
 
@@ -103,7 +104,7 @@ export default function Main() {
       //alert("done");
     }, 1200000);
     return () => clearInterval(interval);
-  }, [city, latitude, longitude, context.theme]);
+  }, [city]);
 
   useEffect(() => {
     //alert(city);
@@ -113,7 +114,7 @@ export default function Main() {
       //alert("done");
     }, 60000);
     return () => clearInterval(interval);
-  }, [context.theme]);
+  }, []);
 
   /*useEffect(() => {
     const cityValue = context.cityRef.current.value;
@@ -131,8 +132,7 @@ export default function Main() {
           `${process.env.REACT_APP_BACKEND_URL}/api/weather?city=${city}`
           //`http://localhost:5001/api/weather?city=${city}`
           //"http://api.openweathermap.org/data/2.5/weather?q=" +            city +            "&units=imperial&APPID=2e991483d328650ae67eb0609d0fc654"
-        )
-        //axios.get("http://api.weatherapi.com/v1/forecast.json?key=ff6cee14345c4052810220417240404&q="+city+"&days=14")
+        ) //axios.get("http://api.weatherapi.com/v1/forecast.json?key=ff6cee14345c4052810220417240404&q="+city+"&days=14")
         .then((response) => {
           const data = response.data;
           console.log("Data***");
@@ -140,6 +140,16 @@ export default function Main() {
           setLatitude(data.coord.lat);
           setLongitude(data.coord.lon);
           getDetailWeather(data.coord.lat, data.coord.lon);
+        })
+        .catch((error) => {
+          console.error("Error fetching weather data:", error);
+          const errorMessage = `Error fetching weather data for ${city}. Please try again`;
+
+          navigate("/error", {
+            state: {
+              message: errorMessage,
+            },
+          });
         });
     } else {
       getDetailWeather(latitude, longitude);
@@ -491,7 +501,7 @@ export default function Main() {
           <Routes>
             <Route path="/" element={<Navigate to="/home" replace />} />
             <Route path="/home" element={<HomePage />} />
-
+            <Route path="/error" element={<ErrorPage />} />
             <Route path="/weather" element={<WeatherPage />}>
               <Route
                 path="/weather/today/:cityParam"

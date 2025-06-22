@@ -540,13 +540,13 @@ input {
       }
     }
   }
-  .section-layout:hover {
+  /*.section-layout:hover {
     .wrapper {
       .cities {
         animation-play-state: paused;
       }
     }
-  }
+  }*/
 }
 
 /* About section */
@@ -867,7 +867,8 @@ input {
   .daily-row .daily-card-list {
     overflow-x: scroll;
     scrollbar-width: none;
-
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
     border-top: 1px solid #878caa;
     border-bottom: 1px solid #878caa;
   }
@@ -935,6 +936,14 @@ input {
   vertical-align: "middle";
 }
 
+.arrow-icon {
+  position: absolute;
+  right: 10%;
+  top: 0%;
+  color: white;
+  font-size: 24px;
+  opacity: 0.3;
+}
 .table-rounded {
   border-radius: 5px !important;
   overflow: hidden;
@@ -1353,6 +1362,23 @@ footer {
   .footer-content {
     padding: 2rem 3rem;
   }
+}
+
+/* ERROR PAGE */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #101322;
+  text-align: center;
+  width: 60%;
+  margin: 5rem auto;
+  padding: 5rem 0;
+  color: #f9a340;
+  gap: 3rem;
+  border-radius: 1rem;
+  border: 1px solid #878caa;
 }
 
 /* COLORS */

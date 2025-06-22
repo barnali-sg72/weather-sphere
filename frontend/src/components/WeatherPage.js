@@ -28,7 +28,7 @@ export default function WeatherPage() {
             context.setLongitude(pos.coords.longitude);
             axios
               .get(
-                `${process.env.REACT_APP_BACKEND_URL}/api/weather/current?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}`
+                `${process.env.REACT_APP_BACKEND_URL}/api/city?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}`
                 //`https://localhost:5001/api/weather/current?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}`
                 //`https://api.openweathermap.org/geo/1.0/reverse?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&limit=5&appid=2e991483d328650ae67eb0609d0fc654`
               )
@@ -38,6 +38,9 @@ export default function WeatherPage() {
                 context.setCity(cityInfo);
                 //alert(location.pathname.replace("current", cityInfo));
                 navigate(location.pathname.replace("current", cityInfo));
+              })
+              .catch((err) => {
+                console.error("Error fetching current weather:" + err);
               });
           });
         } else {

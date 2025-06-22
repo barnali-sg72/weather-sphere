@@ -152,6 +152,7 @@ export default function WeatherDetails() {
                 <></>
               )
             )}
+            {/*<div className="arrow-icon">→</div>*/}
           </div>
           <button
             className="btn btn-light align-self-center"
