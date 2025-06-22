@@ -3,14 +3,16 @@ import { Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
 import { WeatherContext } from "./Main";
 import axios from "axios";
 import { dayImages, nightImages, isDay } from "./utils/utils";
-import { motion } from "framer-motion";
 
 export default function WeatherPage() {
   const { cityParam } = useParams();
   const navigate = useNavigate();
   const context = useContext(WeatherContext);
   const location = useLocation();
-  const [bgStyle, setBgStyle] = useState({});
+  //const [bgStyle, setBgStyle] = useState({});
+  const [imgStyle, setImgStyle] = useState({});
+  const [image, setImage] = useState({});
+
   useEffect(() => {
     if (context.city === "") {
       if (
@@ -43,7 +45,7 @@ export default function WeatherPage() {
         }
       }
     } else {
-      if (cityParam !== "current" && cityParam != context.city) {
+      if (cityParam !== "current" && cityParam !== context.city) {
         context.setCity(decodeURIComponent(cityParam));
       } else {
         context.setCity(context.city);
@@ -65,7 +67,20 @@ export default function WeatherPage() {
         ? dayImages.get(context.weatherDetails.current.weather[0].main)
         : nightImages.get(context.weatherDetails.current.weather[0].main);
 
-      setBgStyle({
+      setImage(image);
+      setImgStyle({
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+
+        objectFit: `cover`,
+        objectPosition: `center`,
+        zIndex: 0,
+      });
+
+      /*setBgStyle({
         position: "fixed",
         top: 0,
         left: 0,
@@ -77,13 +92,15 @@ export default function WeatherPage() {
         backgroundAttachment: `fixed`,
         backgroundRepeat: `no-repeat`,
         zIndex: 0,
-      });
+      });*/
     }
   }, [context]);
 
   return (
     <>
-      <div className="weather-bg" style={bgStyle}></div>
+      <div className="weather-bg">
+        <img src={image} alt="weather background" style={imgStyle} />
+      </div>
       <Outlet />
     </>
   );
