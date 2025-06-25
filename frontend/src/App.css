@@ -922,6 +922,35 @@ input {
       }
     }
   }
+  .alert-row {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 2rem;
+      flex-direction: column;
+
+      li.alert-item {
+        padding: 1rem;
+        border: 1px solid #878caa;
+        border-radius: 1rem;
+        background-color: #101322b1;
+        backdrop-filter: unset;
+        color: white;
+        font-size: 1.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 2rem;
+        h4 {
+          color: #f9a340;
+          margin-bottom: 1rem;
+          font-size: 2.4rem;
+        }
+      }
+    }
+  }
 }
 
 .condition-text {

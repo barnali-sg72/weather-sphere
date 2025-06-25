@@ -170,7 +170,23 @@ export default function Main() {
       .then((res) => {
         //Daily data
         let data = res.data;
+        console.log("Weather Data:");
         console.log(data);
+        /*Alerts*/
+        let alerts = [];
+        if (data.alerts && data.alerts.length > 0) {
+          data.alerts.forEach((alert) => {
+            console.log("🚨 ALERT:", alert.event);
+            console.log("Description:", alert.description);
+            alerts.push({
+              event: alert.event,
+              description: alert.description,
+              start: getLocalDate(alert.start, data.timezone_offset),
+            });
+          });
+        } else {
+          console.log("No alerts for this location.");
+        }
         //let dt = utcToDate(data.current.dt, data.timezone_offset);
         const day = isDay(
           data.current.dt,
@@ -203,6 +219,7 @@ export default function Main() {
           humidity: data.current.humidity,
           dew_point: data.current.dew_point,
           uvi: data.current.uvi,
+          alerts: alerts,
         });
         //console.log(data);
         setWeatherDetails(data);

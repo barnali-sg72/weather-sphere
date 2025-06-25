@@ -268,7 +268,7 @@ export default function WeatherDetails() {
 
               <div className="info-card">
                 <div>
-                  <img height="25" sloading="lazy" rc={visibility}></img>{" "}
+                  <img height="25" sloading="lazy" src={visibility}></img>{" "}
                 </div>
 
                 <div className="info-content">
@@ -301,6 +301,32 @@ export default function WeatherDetails() {
             </div>
           ) : (
             <></>
+          )}
+        </motion.section>
+        <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="info-row alert-row mb-5"
+        >
+          <h3 className="list-head-item mb-0  text-center">ALERTS</h3>
+          {context.weatherDetails &&
+          context.weatherDetails.alerts &&
+          context.weatherDetails.alerts.length > 0 ? (
+            <ul className="alert-list">
+              {context.weatherDetails.alerts.map((alert, index) => (
+                <li key={index} className="alert-item">
+                  <div className="alert-head">
+                    <h4>{alert.event}</h4>
+                  </div>
+                  {alert.description.split("\n").map((line, key) => (
+                    <p key={key}>{line}</p>
+                  ))}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="text-center">No weather alerts at this time.</p>
           )}
         </motion.section>
       </section>

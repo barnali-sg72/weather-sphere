@@ -9,6 +9,12 @@ export default function Header() {
   const context = useContext(AppContext);
   const navigate = useNavigate();
 
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      context.handleSearchClick();
+    }
+  };
+
   return (
     <header className="App-header justify-content-between align-items-center">
       <div
@@ -25,10 +31,7 @@ export default function Header() {
 
       <Nav />
 
-      <form
-        onSubmit={context.handleSearchClick}
-        className="search d-flex align-items-center justify-content-center"
-      >
+      <div className="search d-flex align-items-center justify-content-center">
         <input
           type="text"
           name="city"
@@ -36,12 +39,16 @@ export default function Header() {
           className="form-control"
           placeholder="Search City"
           ref={context.cityRef}
+          onKeyDown={handleKeyDown}
         ></input>
 
-        <button type="submit" className="btn btn-light float-start">
+        <button
+          className="btn btn-light float-start"
+          onClick={context.handleSearchClick}
+        >
           <FaSearch />
         </button>
-      </form>
+      </div>
     </header>
   );
 }
