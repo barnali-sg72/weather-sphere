@@ -102,7 +102,12 @@ export default function WeatherPage() {
   return (
     <>
       <div className="weather-bg">
-        <img src={image} alt="weather background" style={imgStyle} />
+        <img
+          src={image}
+          alt="weather background"
+          loading="lazy"
+          style={imgStyle}
+        />
       </div>
       <Outlet />
     </>

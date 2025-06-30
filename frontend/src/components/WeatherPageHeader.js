@@ -75,7 +75,7 @@ export default function WeatherPageHeader() {
                 height="250"
                 loading="lazy"
                 src={context.weather.iconImage}
-                alt="icon"
+                alt="condition icon"
               />
             </div>
           </div>

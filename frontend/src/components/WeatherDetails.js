@@ -196,7 +196,7 @@ export default function WeatherDetails() {
               <div className="info-card">
                 <div>
                   {" "}
-                  <img height="25" loading="lazy" src={gust} />
+                  <img height="25" alt="Wind Gust" loading="lazy" src={gust} />
                 </div>
 
                 <div className="info-content">
@@ -218,7 +218,12 @@ export default function WeatherDetails() {
 
               <div className="info-card">
                 <div>
-                  <img height="25" loading="lazy" src={latitude}></img>
+                  <img
+                    height="25"
+                    alt="Latitude icon"
+                    loading="lazy"
+                    src={latitude}
+                  ></img>
                 </div>
 
                 <div className="info-content">
@@ -229,7 +234,12 @@ export default function WeatherDetails() {
 
               <div className="info-card">
                 <div>
-                  <img height="25" loading="lazy" src={longitude}></img>
+                  <img
+                    height="25"
+                    loading="lazy"
+                    alt="Longitude icon"
+                    src={longitude}
+                  ></img>
                 </div>
 
                 <div className="info-content">
@@ -268,7 +278,12 @@ export default function WeatherDetails() {
 
               <div className="info-card">
                 <div>
-                  <img height="25" sloading="lazy" src={visibility}></img>{" "}
+                  <img
+                    height="25"
+                    alt="Visibility icon"
+                    loading="lazy"
+                    src={visibility}
+                  ></img>{" "}
                 </div>
 
                 <div className="info-content">

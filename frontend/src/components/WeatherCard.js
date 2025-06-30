@@ -7,6 +7,7 @@ export default function WeatherCard({ city, temp, icon, condition }) {
         className="card-img-top mx-auto"
         alt={condition}
         style={{ width: "80px", height: "80px" }}
+        loading="lazy"
       />
       <div className="card-body">
         <h5 className="card-title">{city}</h5>
